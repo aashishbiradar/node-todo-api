@@ -9,43 +9,43 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp',{ useNewUrlParser: true 
 
     const db = client.db('TodoApp');
     
-    // //1
-    // db.collection('Todos').insertOne({
-    //     text:"Something todo",
-    //     complete:false,
-    // },(err,res) => {
-    //     if(err) {
-    //         return console.log('Not able to insert document');
-    //     }
-    //     console.log(JSON.stringify(res.ops,undefined,2));
-    // });
+    //1
+    db.collection('Todos').insertOne({
+        text:"Something todo",
+        complete:false,
+    },(err,res) => {
+        if(err) {
+            return console.log('Not able to insert document');
+        }
+        console.log(JSON.stringify(res.ops,undefined,2));
+    });
 
-    // //2
-    // db.collection('Users').insertOne({
-    //     name : 'Raju',
-    //     age: 25,
-    //     location: 'Mumbai'
-    // },(err,res) => {
-    //     if(err) {
-    //         return console.log('Not able to insert document');
-    //     }
-    //     console.log(JSON.stringify(res.ops,undefined,2));
-    // });
+    //2
+    db.collection('Users').insertOne({
+        name : 'Raju',
+        age: 25,
+        location: 'Mumbai'
+    },(err,res) => {
+        if(err) {
+            return console.log('Not able to insert document');
+        }
+        console.log(JSON.stringify(res.ops,undefined,2));
+    });
 
-    // //3
-    // db.collection('Users').insertOne({
-    //     name : 'Ravi',
-    //     age:30,
-    //     location: 'Delhi'
-    // },(err,res) => {
-    //     if(err)
-    //     {
-    //         return console.log('Not able to insert doc into Users');
-    //     }
-    //     console.log(JSON.stringify(res.ops,undefined,2));
-    // });
+    //3
+    db.collection('Users').insertOne({
+        name : 'Ravi',
+        age:30,
+        location: 'Delhi'
+    },(err,res) => {
+        if(err)
+        {
+            return console.log('Not able to insert doc into Users');
+        }
+        console.log(JSON.stringify(res.ops,undefined,2));
+    });
 
-    // //4
+    //4
     db.collection('Users').insertOne({
         name : 'Rocky',
         age:27,
