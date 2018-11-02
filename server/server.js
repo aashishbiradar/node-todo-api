@@ -7,7 +7,7 @@ var {User} = require('./models/user');
 const {ObjectID} = require('mongodb');
 
 var app = express();
-var post = process.env.PORT || 3000;
+var port=t = process.env.PORT || 3000;
 app.use(bodyParser.json());
 
 app.post('/todos', (req,res) => {
